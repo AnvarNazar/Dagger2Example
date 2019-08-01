@@ -1,5 +1,5 @@
-package com.anvar.dagger2example;
+package com.anvar.dagger2example.car;
 
-class Rims {
+public class Rims {
     // we don't own this class so we can't annotate it with @Inject
 }

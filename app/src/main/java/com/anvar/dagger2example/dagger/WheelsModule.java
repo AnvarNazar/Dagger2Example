@@ -1,4 +1,8 @@
-package com.anvar.dagger2example;
+package com.anvar.dagger2example.dagger;
+
+import com.anvar.dagger2example.car.Rims;
+import com.anvar.dagger2example.car.Tires;
+import com.anvar.dagger2example.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

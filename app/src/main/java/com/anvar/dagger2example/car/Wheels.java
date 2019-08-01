@@ -1,6 +1,4 @@
-package com.anvar.dagger2example;
-
-import javax.inject.Inject;
+package com.anvar.dagger2example.car;
 
 public class Wheels {
     // we don't own this class so we can't annotate it with @Inject

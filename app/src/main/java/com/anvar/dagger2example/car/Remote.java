@@ -1,4 +1,4 @@
-package com.anvar.dagger2example;
+package com.anvar.dagger2example.car;
 
 import android.util.Log;
 
