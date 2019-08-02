@@ -1,12 +1,12 @@
 package com.anvar.dagger2example;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.anvar.dagger2example.car.Car;
-import com.anvar.dagger2example.dagger.CarComponent;
-import com.anvar.dagger2example.dagger.DaggerCarComponent;
+import com.anvar.dagger2example.dagger.ActivityComponent;
+import com.anvar.dagger2example.dagger.DaggerActivityComponent;
 
 import javax.inject.Inject;
 
@@ -20,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CarComponent component = ((ExampleApp) getApplication()).getAppComponent();
+        ActivityComponent component = DaggerActivityComponent.builder()
+                .horsePower(120)
+                .engineCapacity(1400)
+                .appComponent(((ExampleApp) getApplication()).getAppComponent())
+                .build();
         component.inject(this);
 
         car1.drive();

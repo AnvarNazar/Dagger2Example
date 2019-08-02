@@ -2,8 +2,11 @@ package com.anvar.dagger2example.car;
 
 import android.util.Log;
 
+import com.anvar.dagger2example.dagger.PerActivity;
+
 import javax.inject.Inject;
 
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
 

@@ -2,27 +2,23 @@ package com.anvar.dagger2example;
 
 import android.app.Application;
 
-import com.anvar.dagger2example.dagger.CarComponent;
-import com.anvar.dagger2example.dagger.DaggerCarComponent;
+import com.anvar.dagger2example.dagger.AppComponent;
+import com.anvar.dagger2example.dagger.DaggerAppComponent;
 
 public class ExampleApp extends Application {
 
-    private CarComponent component;
+    private AppComponent component;
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        component = DaggerCarComponent.builder()
-                .horsePower(120)
-                .engineCapacity(1400)
-                .build();
+        component = DaggerAppComponent.create();
     }
 
     /**
      * @return AppComponent
      */
-    public CarComponent getAppComponent() {
+    public AppComponent getAppComponent() {
         return component;
     }
 }
